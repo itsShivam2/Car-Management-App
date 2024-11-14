@@ -41,7 +41,7 @@ const EditCar = () => {
       images.forEach((image) => formData.append('images', image));
 
       const token = localStorage.getItem('token');
-      await axios.put(`/api/cars/${id}`, formData, {
+      await axios.put(`gttp://localhost:3000/api/cars/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',
